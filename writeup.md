@@ -99,8 +99,8 @@ To train the model, I used an following hyperparameters:
 ####4. Optimization Approach
 
 My final model results were:
-* validation set accuracy of 0.945 
-* test set accuracy of 0.931
+* validation set accuracy of 0.930 
+* test set accuracy of 0.938
 
 If an iterative approach was chosen:
 
@@ -141,60 +141,65 @@ The model was able to correctly guess 5 of the 5 traffic signs, which gives an a
 
 ####3. Top five prediction for the each images
 
-The code for making predictions on my final model is located in the 85th cell of the Ipython notebook.
+The code for making predictions on my final model is located in the 33th cell of the Ipython notebook.
 
 ###### First Image (Speed limit (120km/h))
-For the first image, the model has relatively low confidence. The top five soft max probabilities were as follows:
+For the first image, the model has quit high confidence. The top five soft max probabilities were as follows:
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .15         			| Speed limit (120km/h)  									| 
-| .13     				| Speed limit (20km/h) 										|
-| .11					| Speed limit (70km/h)											|
-| .10	      			| Speed limit (40km/h)					 				|
-| .09				    | Speed limit (100km/h)      							|
+| 9.99984503e-01         			| Speed limit (120km/h)  									| 
+| 1.25254073e-05     				| Speed limit (100km/h) 										|
+| 2.90273215e-06					| Speed limit (80km/h)											|
+| 1.97651460e-08	      			| Speed limit (70km/h)					 				|
+| 4.49095788e-10				    | Speed limit (30km/h)      							|
 
 ###### Second Image (Pedestrians)
 For the second image, the model has relatively low confidence. The top five soft max probabilities were were as follows:
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .18         			| Bumpy road  									| 
-| .12     				| Wild animals crossing 										|
-| .09					| Speed limit (20km/h)											|
-| .07	      			| Slippery road					 				|
-| .07				    | Dangerous curve to left      							|
+| 7.95623899e-01         			| Bumpy road  									| 
+| 1.34989634e-01     				| Traffic signals 										|
+| 3.05744708e-02					| Wild animals crossing											|
+| 1.79677382e-02	      			| Dangerous curve to the right				 				|
+| 8.66960920e-03				    | Speed limit (30km/h)      							|
 
 ###### Third Image (Roundabout Mandatory)
-For the third image, the model has relatively high confidence. The top five soft max probabilities were were as follows:
+For the third image, the model has quite high confidence. The top five soft max probabilities were were as follows:
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .17         			| Roundabout Mandatory  									| 
-| .05     				| Pedestrians 										|
-| .04					| Right-of-way at the next intersection											|
-| .04	      			| Dangerous curve to the right					 				|
-| .04				    | Go straight or left      							|
+| 9.99999523e-01         			| Roundabout Mandatory  									| 
+| 2.78984345e-07     				| Speed limit (80km/h) 										|
+| 6.90753339e-08					| End of no passing by vehicles over 3.5 metric ... intersection											|
+| 5.42083392e-08	      			| Keep right					 				|
+| 2.41522233e-08				    | End of no passing      							|
 
 ###### Fourth Image (Priority road)
-For the fourth image, the model has relatively high confidence. The top five soft max probabilities were were as follows:
+For the fourth image, the model has quite high confidence. The top five soft max probabilities were were as follows:
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .18         			| Priority road  									| 
-| .03     				| Speed limit (100km/h) 										|
-| .02					| Yield											|
-| .01	      			| No passing					 				|
-| .01				    | Stop     							|
+| 9.99999642e-01         			| Priority road  									| 
+| 1.66859493e-07     				| No passing for vehicles over 3.5 metric tons										|
+| 1.37410993e-07					| End of all speed and passing limits											|
+| 2.00002255e-08	      			| No passing					 				|
+| 2.80819523e-09				    | End of speed limit (80km/h)     							|
 
 ###### Third Image (Slippery road)
-For the fifth image, the model has relatively low confidence. The top five soft max probabilities were were as follows:
+For the fifth image, the model has quite high confidence. The top five soft max probabilities were were as follows:
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .14         			| Slippery road  									| 
-| .10     				| Wild animals crossing 										|
-| .07					| Double curve											|
-| .06	      			| End of speed limit (80km/h)					 				|
-| .04				    | Right-of-way at the next intersection      							|
+| 9.97136235e-0         			| Slippery road  									| 
+| 1.84283464e-03     				| Wild animals crossing 										|
+| 6.03827764e-04					| Dangerous curve to the left											|
+| 3.88284650e-04	      			| No passing					 				|
+| 1.09566363e-05				    | Right-of-way at the next intersection      							|
 
+[[ 8  7  4  5  2]
+ [22 26 31 20  1]
+ [40  5 42 38 41]
+ [12 10 32  9  6]
+ [23 31 19  9 11]]

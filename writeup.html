@@ -1067,7 +1067,7 @@ signs data set:</p>
 </ul>
 <h4 id="2-number-of-each-labels"><a name="user-content-2-number-of-each-labels" href="#2-number-of-each-labels" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>2. Number of each labels</h4>
 <p>In the dataset, the number of each label is differnt, ranges from less than 200 to more than 2000.<br />
-<img alt="image0" src="///C://Users/imach/Desktop/Udacity/CarND-Traffic-Sign-Classifier-Project/myImages/counts.png" title="original" /></p>
+<img alt="image0" src="///C://Users/imach/Desktop/Udacity/test/Udacity-CarND-TrafficSign/myImages/counts.png" title="original" /></p>
 <h3 id="design-and-test-a-model-architecture"><a name="user-content-design-and-test-a-model-architecture" href="#design-and-test-a-model-architecture" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Design and Test a Model Architecture</h3>
 <h4 id="1-data-preprocessing"><a name="user-content-1-data-preprocessing" href="#1-data-preprocessing" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>1. Data Preprocessing</h4>
 <p>As a first step, I enhanced the number of training images so that we can use more complicated data.<br />
@@ -1080,11 +1080,11 @@ I used following 4 types of filtering:</p>
 </ol>
 <p>Here is an example of a speed limit sign image before and after filtering. Unfortunately, the program was down when all of above 4 filtering are used. So I&rsquo;ve decided to use only gamma correction and additive white gaussian noise.</p>
 <h6 id="original-image"><a name="user-content-original-image" href="#original-image" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Original Image</h6>
-<p><img alt="image6" src="///C://Users/imach/Desktop/Udacity/CarND-Traffic-Sign-Classifier-Project/myImages/org.png" title="original" /></p>
+<p><img alt="image6" src="///C://Users/imach/Desktop/Udacity/test/Udacity-CarND-TrafficSign/myImages/org.png" title="original" /></p>
 <h6 id="contrast-change-highlow"><a name="user-content-contrast-change-highlow" href="#contrast-change-highlow" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Contrast change [high/low]</h6>
-<p><img alt="image7" src="///C://Users/imach/Desktop/Udacity/CarND-Traffic-Sign-Classifier-Project/myImages/high_ctr.png" title="highcontr" /><img alt="image8" src="///C://Users/imach/Desktop/Udacity/CarND-Traffic-Sign-Classifier-Project/myImages/low_ctr.png" title="lowcontr" /></p>
+<p><img alt="image7" src="///C://Users/imach/Desktop/Udacity/test/Udacity-CarND-TrafficSign/myImages/high_ctr.png" title="highcontr" /><img alt="image8" src="///C://Users/imach/Desktop/Udacity/test/Udacity-CarND-TrafficSign/myImages/low_ctr.png" title="lowcontr" /></p>
 <h6 id="gamma-correction-highlow"><a name="user-content-gamma-correction-highlow" href="#gamma-correction-highlow" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Gamma correction [high/low]</h6>
-<p><img alt="image9" src="///C://Users/imach/Desktop/Udacity/CarND-Traffic-Sign-Classifier-Project/myImages/high_gamma.png" title="highgamma" /><img alt="image10" src="///C://Users/imach/Desktop/Udacity/CarND-Traffic-Sign-Classifier-Project/myImages/low_gamma.png" title="lowgamma" /></p>
+<p><img alt="image9" src="///C://Users/imach/Desktop/Udacity/test/Udacity-CarND-TrafficSign/myImages/high_gamma.png" title="highgamma" /><img alt="image10" src="///C://Users/imach/Desktop/Udacity/test/Udacity-CarND-TrafficSign/myImages/low_gamma.png" title="lowgamma" /></p>
 <p>As a last step, I normalized the image data to prevent gradient loss. In this assignment, I used simple normalization as below:</p>
 <pre><code class="python">def normalize(data):
     return (data.astype(int) - 128) / 128
@@ -1162,8 +1162,8 @@ I used following 4 types of filtering:</p>
 </ul>
 <h4 id="4-optimization-approach"><a name="user-content-4-optimization-approach" href="#4-optimization-approach" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>4. Optimization Approach</h4>
 <p>My final model results were:<br />
-<em> validation set accuracy of 0.945 <br />
-</em> test set accuracy of 0.931</p>
+<em> validation set accuracy of 0.930 <br />
+</em> test set accuracy of 0.938</p>
 <p>If an iterative approach was chosen:</p>
 <ul>
 <li>At first, I used almost same architecture with LeNet.</li>
@@ -1180,7 +1180,7 @@ I used following 4 types of filtering:</p>
 <h3 id="test-a-model-on-new-images"><a name="user-content-test-a-model-on-new-images" href="#test-a-model-on-new-images" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Test a Model on New Images</h3>
 <h4 id="1-chosen-images"><a name="user-content-1-chosen-images" href="#1-chosen-images" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>1. Chosen images</h4>
 <p>Here are five German traffic signs that I found on the web:</p>
-<p><img alt="image1" src="///C://Users/imach/Desktop/Udacity/CarND-Traffic-Sign-Classifier-Project/myImages/120km_s.jpg" title="speedlimit" /> <img alt="image2" src="///C://Users/imach/Desktop/Udacity/CarND-Traffic-Sign-Classifier-Project/myImages/bumpy_s.jpg" title="Pedestrian" /> <img alt="image3" src="///C://Users/imach/Desktop/Udacity/CarND-Traffic-Sign-Classifier-Project/myImages/roundabout_s.jpg" title="Roundaobut" /> <img alt="image4" src="///C://Users/imach/Desktop/Udacity/CarND-Traffic-Sign-Classifier-Project/myImages/priority2_s.jpg" title="Priority" /> <img alt="image5" src="///C://Users/imach/Desktop/Udacity/CarND-Traffic-Sign-Classifier-Project/myImages/slippery_s.jpg" title="Slippery Road" /></p>
+<p><img alt="image1" src="///C://Users/imach/Desktop/Udacity/test/Udacity-CarND-TrafficSign/myImages/120km_s.jpg" title="speedlimit" /> <img alt="image2" src="///C://Users/imach/Desktop/Udacity/test/Udacity-CarND-TrafficSign/myImages/bumpy_s.jpg" title="Pedestrian" /> <img alt="image3" src="///C://Users/imach/Desktop/Udacity/test/Udacity-CarND-TrafficSign/myImages/roundabout_s.jpg" title="Roundaobut" /> <img alt="image4" src="///C://Users/imach/Desktop/Udacity/test/Udacity-CarND-TrafficSign/myImages/priority2_s.jpg" title="Priority" /> <img alt="image5" src="///C://Users/imach/Desktop/Udacity/test/Udacity-CarND-TrafficSign/myImages/slippery_s.jpg" title="Slippery Road" /></p>
 <p>The fifth image might be difficult to classify because there is a tree behind the sign board. It might confuse the classifier.</p>
 <h4 id="2-classifiation-result"><a name="user-content-2-classifiation-result" href="#2-classifiation-result" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>2. Classifiation Result</h4>
 <p>Here are the results of the prediction:</p>
@@ -1216,9 +1216,9 @@ I used following 4 types of filtering:</p>
 </table>
 <p>The model was able to correctly guess 5 of the 5 traffic signs, which gives an accuracy of 100%. This compares favorably to the accuracy on the test set of 93%.</p>
 <h4 id="3-top-five-prediction-for-the-each-images"><a name="user-content-3-top-five-prediction-for-the-each-images" href="#3-top-five-prediction-for-the-each-images" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3. Top five prediction for the each images</h4>
-<p>The code for making predictions on my final model is located in the 85th cell of the Ipython notebook.</p>
+<p>The code for making predictions on my final model is located in the 33th cell of the Ipython notebook.</p>
 <h6 id="first-image-speed-limit-120kmh"><a name="user-content-first-image-speed-limit-120kmh" href="#first-image-speed-limit-120kmh" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>First Image (Speed limit (120km/h))</h6>
-<p>For the first image, the model has relatively low confidence. The top five soft max probabilities were as follows:</p>
+<p>For the first image, the model has quit high confidence. The top five soft max probabilities were as follows:</p>
 <table>
 <thead>
 <tr>
@@ -1228,24 +1228,24 @@ I used following 4 types of filtering:</p>
 </thead>
 <tbody>
 <tr>
-<td align="center">.15</td>
+<td align="center">9.99984503e-01</td>
 <td align="center">Speed limit (120km/h)</td>
 </tr>
 <tr>
-<td align="center">.13</td>
-<td align="center">Speed limit (20km/h)</td>
+<td align="center">1.25254073e-05</td>
+<td align="center">Speed limit (100km/h)</td>
 </tr>
 <tr>
-<td align="center">.11</td>
+<td align="center">2.90273215e-06</td>
+<td align="center">Speed limit (80km/h)</td>
+</tr>
+<tr>
+<td align="center">1.97651460e-08</td>
 <td align="center">Speed limit (70km/h)</td>
 </tr>
 <tr>
-<td align="center">.10</td>
-<td align="center">Speed limit (40km/h)</td>
-</tr>
-<tr>
-<td align="center">.09</td>
-<td align="center">Speed limit (100km/h)</td>
+<td align="center">4.49095788e-10</td>
+<td align="center">Speed limit (30km/h)</td>
 </tr>
 </tbody>
 </table>
@@ -1260,29 +1260,29 @@ I used following 4 types of filtering:</p>
 </thead>
 <tbody>
 <tr>
-<td align="center">.18</td>
+<td align="center">7.95623899e-01</td>
 <td align="center">Bumpy road</td>
 </tr>
 <tr>
-<td align="center">.12</td>
+<td align="center">1.34989634e-01</td>
+<td align="center">Traffic signals</td>
+</tr>
+<tr>
+<td align="center">3.05744708e-02</td>
 <td align="center">Wild animals crossing</td>
 </tr>
 <tr>
-<td align="center">.09</td>
-<td align="center">Speed limit (20km/h)</td>
+<td align="center">1.79677382e-02</td>
+<td align="center">Dangerous curve to the right</td>
 </tr>
 <tr>
-<td align="center">.07</td>
-<td align="center">Slippery road</td>
-</tr>
-<tr>
-<td align="center">.07</td>
-<td align="center">Dangerous curve to left</td>
+<td align="center">8.66960920e-03</td>
+<td align="center">Speed limit (30km/h)</td>
 </tr>
 </tbody>
 </table>
 <h6 id="third-image-roundabout-mandatory"><a name="user-content-third-image-roundabout-mandatory" href="#third-image-roundabout-mandatory" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Third Image (Roundabout Mandatory)</h6>
-<p>For the third image, the model has relatively high confidence. The top five soft max probabilities were were as follows:</p>
+<p>For the third image, the model has quite high confidence. The top five soft max probabilities were were as follows:</p>
 <table>
 <thead>
 <tr>
@@ -1292,29 +1292,29 @@ I used following 4 types of filtering:</p>
 </thead>
 <tbody>
 <tr>
-<td align="center">.17</td>
+<td align="center">9.99999523e-01</td>
 <td align="center">Roundabout Mandatory</td>
 </tr>
 <tr>
-<td align="center">.05</td>
-<td align="center">Pedestrians</td>
+<td align="center">2.78984345e-07</td>
+<td align="center">Speed limit (80km/h)</td>
 </tr>
 <tr>
-<td align="center">.04</td>
-<td align="center">Right-of-way at the next intersection</td>
+<td align="center">6.90753339e-08</td>
+<td align="center">End of no passing by vehicles over 3.5 metric &hellip; intersection</td>
 </tr>
 <tr>
-<td align="center">.04</td>
-<td align="center">Dangerous curve to the right</td>
+<td align="center">5.42083392e-08</td>
+<td align="center">Keep right</td>
 </tr>
 <tr>
-<td align="center">.04</td>
-<td align="center">Go straight or left</td>
+<td align="center">2.41522233e-08</td>
+<td align="center">End of no passing</td>
 </tr>
 </tbody>
 </table>
 <h6 id="fourth-image-priority-road"><a name="user-content-fourth-image-priority-road" href="#fourth-image-priority-road" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Fourth Image (Priority road)</h6>
-<p>For the fourth image, the model has relatively high confidence. The top five soft max probabilities were were as follows:</p>
+<p>For the fourth image, the model has quite high confidence. The top five soft max probabilities were were as follows:</p>
 <table>
 <thead>
 <tr>
@@ -1324,29 +1324,29 @@ I used following 4 types of filtering:</p>
 </thead>
 <tbody>
 <tr>
-<td align="center">.18</td>
+<td align="center">9.99999642e-01</td>
 <td align="center">Priority road</td>
 </tr>
 <tr>
-<td align="center">.03</td>
-<td align="center">Speed limit (100km/h)</td>
+<td align="center">1.66859493e-07</td>
+<td align="center">No passing for vehicles over 3.5 metric tons</td>
 </tr>
 <tr>
-<td align="center">.02</td>
-<td align="center">Yield</td>
+<td align="center">1.37410993e-07</td>
+<td align="center">End of all speed and passing limits</td>
 </tr>
 <tr>
-<td align="center">.01</td>
+<td align="center">2.00002255e-08</td>
 <td align="center">No passing</td>
 </tr>
 <tr>
-<td align="center">.01</td>
-<td align="center">Stop</td>
+<td align="center">2.80819523e-09</td>
+<td align="center">End of speed limit (80km/h)</td>
 </tr>
 </tbody>
 </table>
 <h6 id="third-image-slippery-road"><a name="user-content-third-image-slippery-road" href="#third-image-slippery-road" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Third Image (Slippery road)</h6>
-<p>For the fifth image, the model has relatively low confidence. The top five soft max probabilities were were as follows:</p>
+<p>For the fifth image, the model has quite high confidence. The top five soft max probabilities were were as follows:</p>
 <table>
 <thead>
 <tr>
@@ -1356,24 +1356,29 @@ I used following 4 types of filtering:</p>
 </thead>
 <tbody>
 <tr>
-<td align="center">.14</td>
+<td align="center">9.97136235e-0</td>
 <td align="center">Slippery road</td>
 </tr>
 <tr>
-<td align="center">.10</td>
+<td align="center">1.84283464e-03</td>
 <td align="center">Wild animals crossing</td>
 </tr>
 <tr>
-<td align="center">.07</td>
-<td align="center">Double curve</td>
+<td align="center">6.03827764e-04</td>
+<td align="center">Dangerous curve to the left</td>
 </tr>
 <tr>
-<td align="center">.06</td>
-<td align="center">End of speed limit (80km/h)</td>
+<td align="center">3.88284650e-04</td>
+<td align="center">No passing</td>
 </tr>
 <tr>
-<td align="center">.04</td>
+<td align="center">1.09566363e-05</td>
 <td align="center">Right-of-way at the next intersection</td>
 </tr>
 </tbody>
-</table></article></body></html>
+</table>
+<p>[[ 8  7  4  5  2]<br />
+ [22 26 31 20  1]<br />
+ [40  5 42 38 41]<br />
+ [12 10 32  9  6]<br />
+ [23 31 19  9 11]]</p></article></body></html>
